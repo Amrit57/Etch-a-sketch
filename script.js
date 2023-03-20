@@ -1,9 +1,10 @@
 
+const gridWrapper = document.querySelector('.wrapper');
 const singleColor = document.getElementById('single-color');
 const rainbowColor = document.getElementById('rainbow-color');
 const eraser = document.getElementById('eraser');
 const clear = document.getElementById('clear');
-console.log(eraser);
+const rangeSize = document.getElementById("range");
 
 const defaultColor = '#000';
 const defaultSize = 16;
@@ -13,19 +14,23 @@ let currentColor = defaultColor;
 let currentSize = defaultSize;
 let currentMode = defaultMode;
 
-const gridWrapper = document.querySelector('.wrapper');
+
+// singleColor.addEventListener('click', )
+
 function gridSetup (size) {
     gridWrapper.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     gridWrapper.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
     for(i=0; i < size*size; i++){
-        const gridWrapper = document.querySelector('.wrapper');
         const grid = document.createElement('div');
-        grid.classList.add('grid')
-        grid.
-        gridWrapper.appendChild(grid)
+        grid.classList.add('grid');
+        gridWrapper.appendChild(grid);
+        grid.addEventListener('mouseover', changeColor)
     }
-
-
 }
-gridSetup(16);
+gridSetup(rangeSize.value);
+
+function changeColor(e){
+    e.target.style.background = currentColor;
+        
+}
