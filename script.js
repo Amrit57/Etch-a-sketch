@@ -1,5 +1,17 @@
 
+const singleColor = document.getElementById('single-color');
+const rainbowColor = document.getElementById('rainbow-color');
+const eraser = document.getElementById('eraser');
+const clear = document.getElementById('clear');
+console.log(eraser);
 
+const defaultColor = '#000';
+const defaultSize = 16;
+const defaultMode = 'singleColor';
+
+let currentColor = defaultColor;
+let currentSize = defaultSize;
+let currentMode = defaultMode;
 
 const gridWrapper = document.querySelector('.wrapper');
 function gridSetup (size) {
