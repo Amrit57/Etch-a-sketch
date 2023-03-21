@@ -94,7 +94,7 @@ function changeColor(e){
 
     } else if (currentMode === 'eraser'){
 
-        e.target.style.background = "rgb(255, 255, 255";
+        e.target.style.background = 'rgb(255, 255, 255)';
     }
 }
 
