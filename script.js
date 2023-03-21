@@ -49,14 +49,14 @@ function changeSize(value){
 function updateNewSize(value){
     gridSizeValue.innerHTML = `${value} x ${value}`;
 }
-// function that reloads new  grid
+// function that reloads new  grid.
 function reloadGrid() {
     clearGrid()
     gridSetup(currentSize)
   }
   
   function clearGrid() {
-    gridWrapper.innerHTML = ''
+    gridWrapper.innerHTML = '';
   }
   
 //function that adds grid and changes grid color when mouseover.
@@ -94,7 +94,7 @@ function changeColor(e){
 
     } else if (currentMode === 'eraser'){
 
-        e.target.style.background = '"rgb(255, 255, 255"';
+        e.target.style.background = "rgb(255, 255, 255";
     }
 }
 
