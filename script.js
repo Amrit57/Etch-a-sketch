@@ -45,9 +45,11 @@ function changeSize(value){
     updateNewSize(value);
     reloadGrid();
 }
+//function that takes value from html and changes the gridSize value.
 function updateNewSize(value){
     gridSizeValue.innerHTML = `${value} x ${value}`;
 }
+// function that reloads new  grid
 function reloadGrid() {
     clearGrid()
     gridSetup(currentSize)
@@ -71,10 +73,12 @@ function gridSetup (size) {
     }
 }
 
+//Condition to sketch on mousedown/over
 let mouseDown = false
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
+//function that changeColor
 function changeColor(e){
     if(e.type === 'mouseover' && !mouseDown) return;
     if(currentMode === 'rainbowMode'){
@@ -90,10 +94,11 @@ function changeColor(e){
 
     } else if (currentMode === 'eraser'){
 
-        e.target.style.background = 'rgb(255, 255, 255';
+        e.target.style.background = '"rgb(255, 255, 255"';
     }
 }
 
+// function to apply styling in active btns.
     function activateButton(newMode) {
     if (currentMode === 'rainbowMode') {
       rainbowColorMode.classList.remove('active')
